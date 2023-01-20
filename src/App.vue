@@ -1,29 +1,46 @@
-<script setup>
-import HelloWorld from './components/HelloWorld.vue'
-</script>
-
 <template>
-  <div>
-    <a href="https://vitejs.dev" target="_blank">
-      <img src="/vite.svg" class="logo" alt="Vite logo" />
-    </a>
-    <a href="https://vuejs.org/" target="_blank">
-      <img src="./assets/vue.svg" class="logo vue" alt="Vue logo" />
-    </a>
-  </div>
-  <HelloWorld msg="Vite + Vue" />
+    <div>
+        <navbar></navbar>
+        <router-view></router-view>
+        <vue-progress-bar></vue-progress-bar>
+    </div>
 </template>
 
-<style scoped>
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.vue:hover {
-  filter: drop-shadow(0 0 2em #42b883aa);
-}
+<style lang="scss">
+@import "./assets/scss/main.scss"
 </style>
+
+<script setup>
+    import Navbar from './components/Navbar.vue'
+</script>
+
+<script>
+    export default {
+        mounted() {
+            //  [App.vue specific] When App.vue is finish loading finish the progress bar
+            this.$Progress.finish();
+        },
+        created() {
+            //  [App.vue specific] When App.vue is first loaded start the progress bar
+            this.$Progress.start();
+            //  hook the progress bar to start before we move router-view
+            this.$router.beforeEach((to, from, next) => {
+                //  does the page we want to go to have a meta.progress object
+                if (to.meta.progress !== undefined) {
+                let meta = to.meta.progress;
+                // parse meta tags
+                this.$Progress.parseMeta(meta);
+                }
+                //  start the progress bar
+                this.$Progress.start();
+                //  continue to next page
+                next();
+            });
+            //  hook the progress bar to finish after we've finished moving router-view
+            this.$router.afterEach((to, from) => {
+                //  finish the progress bar
+                this.$Progress.finish();
+            });
+        },
+    };
+</script>
