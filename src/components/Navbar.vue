@@ -34,7 +34,7 @@
 <style scoped lang="scss">
     nav {
         background: transparent;
-        position: fixed;
+        position: absolute;
         top: 0;
         left: 0;
         width: 100%;
@@ -42,7 +42,7 @@
         .nav-item:not(.last-child) .nav-link {
             margin-right: 32px;
         }
-        .nav-link {
+        .nav-link, .navbar-brand {
             color: #fff;
         }
         .active.exact-active-link.nav-link {
