@@ -1,7 +1,9 @@
 <template>
-    <nav class="navbar navbar-expand-lg">
+    <nav class="navbar navbar-expand-lg navbar-dark">
         <div class="container">
-            <router-link to="/" class="navbar-brand" >Navbar</router-link>
+            <router-link to="/" class="navbar-brand" >
+                <img src="../assets/images/logo.png" alt="Logo" class="w-25">
+            </router-link>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
             </button>
@@ -39,6 +41,7 @@
         left: 0;
         width: 100%;
         padding: 23px 50px;
+        z-index: 2;
         .nav-item:not(.last-child) .nav-link {
             margin-right: 32px;
         }

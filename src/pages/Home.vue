@@ -5,6 +5,7 @@
         </video>
         <div class="content">
             <h1>Jakpus</h1>
+            <p>Im Ganteng</p>
             <a href="">Explore</a>
         </div>
     </div>
