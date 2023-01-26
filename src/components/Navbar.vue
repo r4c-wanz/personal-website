@@ -45,7 +45,7 @@
         .nav-link {
             color: #fff;
         }
-        .active {
+        .active.exact-active-link.nav-link {
             color: #fff;
             font-weight: bold;
         }
