@@ -17,7 +17,11 @@
             </div>
             <div class="fixed-block block-right">
                 <ul class="list-unstyled social-icons">
-                    
+                    <li><a href=""><i class="fa-brands fa-twitter"></i></a></li>
+                    <li><a href=""><i class="fa-brands fa-facebook"></i></a></li>
+                    <li><a href=""><i class="fa-brands fa-linkedin"></i></a></li>
+                    <li><a href=""><i class="fa-brands fa-github"></i></a></li>
+                    <li><a href=""><i class="fa-brands fa-instagram"></i></a></li>
                 </ul>
             </div>
         </div>

@@ -47,4 +47,44 @@
         height: 100%;
         z-index: -1;
     }
+    .fixed-block {
+        margin: 0 50px;
+        bottom: 34px;
+        position: absolute;
+    }
+    .block-left {
+        left: 0;
+    }
+    .block-right {
+        right: 0;
+    }
+    .list-unstyled {
+        list-style: none;
+        padding-left: 0;
+    }
+    .language-list {
+        margin: 0;
+        .single-language {
+            -webkit-transform: rotate(90deg);
+            color: #e6e6e6;
+            display: block;
+            margin-top: 20px;
+            text-decoration: none;
+            text-transform: uppercase;
+            transform: rotate(90deg);
+        }
+    }
+    .social-icons {
+        margin-bottom: 0;
+        li {
+            line-height: 100%;
+            margin-top: 14px;
+            text-align: center;
+            i {
+                color: #f3f3f3;
+                font-size: 23px;
+                line-height: 100%;
+            }
+        }
+    }
 }
