@@ -24,4 +24,7 @@ const options = {
     inverse: false,
 };
 
-createApp(App).use(VueProgressBar, options).use(router).mount('#app')
+// Vue Writer
+import VueWriter from "vue-writer";
+
+createApp(App).use(VueWriter).use(VueProgressBar, options).use(router).mount('#app')

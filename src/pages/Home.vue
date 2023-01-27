@@ -5,11 +5,15 @@
         </video>
         <div class="content">
             <h1>Jakpus</h1>
-            <p>Im Handsome</p>
+            <p>I'm a <vueWriter style="display: inline;" :array="arrayKetikan" /></p>
             <a href="">Explore</a>
         </div>
     </div>
 </template>
+
+<script setup>
+    let arrayKetikan = ['Handsome', 'Tampan']
+</script>
 
 <style lang="scss">
     @import '../assets/scss/home.scss'
