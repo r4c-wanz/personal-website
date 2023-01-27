@@ -1,3 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
 html, body {
-    background-color: #111;
+    font-family: 'Roboto', sans-serif !important;
+}
+
+::-moz-selection {
+    background-color: #009e66;
+}
+
+::selection {
+    background-color: #009e66;
 }
