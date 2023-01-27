@@ -8,6 +8,19 @@
             <p>I'm a <vueWriter style="display: inline;" :array="arrayKetikan" /></p>
             <a href="">Explore</a>
         </div>
+        <div class="fixed-wrapper">
+            <div class="fixed-block block-left">
+                <ul class="list-unstyled language-list">
+                    <li><a href="" class="single-language">ENG</a></li>
+                    <li><a href="" class="single-language">IDN</a></li>
+                </ul>
+            </div>
+            <div class="fixed-block block-right">
+                <ul class="list-unstyled social-icons">
+                    
+                </ul>
+            </div>
+        </div>
     </div>
 </template>
 
